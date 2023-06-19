@@ -1,6 +1,6 @@
 import React from 'react';
 import { usePathname, useParams } from 'next/navigation';
-import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import locales from 'data/locales.ts';
 
@@ -43,13 +43,17 @@ const LangSwitch = function LangSwitchComponent() {
   };
 
   return (
-    <>
+    <NavDropdown title={lang.toUpperCase()} id="lang-switch">
       {locales.map((locale) => {
-        const { shortText } = getItemText(locale);
+        const { longText } = getItemText(locale);
 
-        return <Nav.Link href={langPath(locale)}>{shortText}</Nav.Link>;
+        return (
+          <NavDropdown.Item key={locale} href={langPath(locale)}>
+            {longText}
+          </NavDropdown.Item>
+        );
       })}
-    </>
+    </NavDropdown>
   );
 };
 

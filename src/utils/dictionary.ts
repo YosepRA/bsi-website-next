@@ -15,6 +15,11 @@ const dictionaries = {
 };
 
 async function getDictionary(locale: string): Promise<Dictionary> {
+  // Return default English dictionary for static files access (favicon.ico, etc).
+  if (!Object.keys(dictionaries).includes(locale)) {
+    return dictionaries.en();
+  }
+
   return dictionaries[locale as keyof DictionaryImportType]();
 }
 
