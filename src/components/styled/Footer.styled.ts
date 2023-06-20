@@ -58,6 +58,12 @@ export const Footer = styled.footer`
               text-decoration: underline;
             }
           }
+
+          &--whitepaper {
+            svg {
+              font-size: 0.8em;
+            }
+          }
         }
       }
     }
@@ -99,6 +105,21 @@ export const Footer = styled.footer`
       &__title {
         font-size: 18px;
         font-weight: 700;
+      }
+
+      &__list {
+        padding-left: 0;
+
+        &-item {
+          display: inline-block;
+          margin-right: 22px;
+          list-style: none;
+          font-size: 24px;
+
+          a {
+            color: inherit;
+          }
+        }
       }
     }
 

@@ -37,7 +37,7 @@ export const RoadmapYear = styled.article`
   }
 `;
 
-export const RoadmapIntro = styled.div`
+export const RoadmapTitleBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

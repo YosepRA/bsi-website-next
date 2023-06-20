@@ -1,5 +1,231 @@
 {
+  "mainNavbar": {
+    "menu": {
+      "aboutUs": "About Us",
+      "wallet": "Wallet",
+      "partners": "Partners",
+      "joinUs": "Join Us",
+      "whitepaper": "Whitepaper"
+    }
+  },
+  "footer": {
+    "info": {
+      "excerpt": [
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+      ],
+      "contact": "Contact us"
+    },
+    "navigation": {
+      "title": "More Information",
+      "menu": {
+        "aboutUs": "About Us",
+        "wallet": "Wallet",
+        "partners": "Partners",
+        "joinUs": "Join Us",
+        "whitepaper": "Whitepaper"
+      }
+    },
+    "media": {
+      "audit": {
+        "title": "Audited by"
+      },
+      "listing": {
+        "title": "Listed on"
+      }
+    },
+    "socialMedia": {
+      "title": "Follow Us"
+    },
+    "smartContract": {
+      "title": "Please check our"
+    }
+  },
   "home": {
-    "title": "Home Page"
+    "banner": {
+      "excerpt": [
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+      ]
+    },
+    "ecosystem": {
+      "intro": {
+        "excerpt": [
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+        ]
+      },
+      "companies": [
+        {
+          "title": "Viaje",
+          "excerpt": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+          ],
+          "logoUrl": "https://placehold.co/400"
+        },
+        {
+          "title": "AI Collabo",
+          "excerpt": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+          ],
+          "logoUrl": "https://placehold.co/400"
+        },
+        {
+          "title": "Wish You",
+          "excerpt": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+          ],
+          "logoUrl": "https://placehold.co/400"
+        }
+      ]
+    },
+    "aiFlow": {
+      "items": [
+        {
+          "title": "Title",
+          "excerpt": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+          ],
+          "iconUrl": "https://placehold.co/400"
+        },
+        {
+          "title": "Title",
+          "excerpt": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+          ],
+          "iconUrl": "https://placehold.co/400"
+        },
+        {
+          "title": "Title",
+          "excerpt": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+          ],
+          "iconUrl": "https://placehold.co/400"
+        }
+      ]
+    },
+    "roadmap": {
+      "items": [
+        {
+          "titleBox": {
+            "iconUrl": "https://placehold.co/400",
+            "title": "Implemented Projects"
+          },
+          "list": [
+            {
+              "header": {
+                "iconUrl": "https://placehold.co/400",
+                "title": "Title 01"
+              },
+              "body": {
+                "list": ["Item one", "Item two", "Item three"]
+              }
+            },
+            {
+              "header": {
+                "iconUrl": "https://placehold.co/400",
+                "title": "Title 02"
+              },
+              "body": {
+                "list": ["Item one", "Item two", "Item three"]
+              }
+            },
+            {
+              "header": {
+                "iconUrl": "https://placehold.co/400",
+                "title": "Title 03"
+              },
+              "body": {
+                "list": ["Item one", "Item two", "Item three"]
+              }
+            },
+            {
+              "header": {
+                "iconUrl": "https://placehold.co/400",
+                "title": "Title 04"
+              },
+              "body": {
+                "list": ["Item one", "Item two", "Item three"]
+              }
+            }
+          ]
+        },
+        {
+          "titleBox": {
+            "iconUrl": "https://placehold.co/400",
+            "title": "2023"
+          },
+          "list": [
+            {
+              "header": {
+                "iconUrl": "https://placehold.co/400",
+                "title": "Title 01"
+              },
+              "body": {
+                "list": ["Item one", "Item two", "Item three"]
+              }
+            },
+            {
+              "header": {
+                "iconUrl": "https://placehold.co/400",
+                "title": "Title 02"
+              },
+              "body": {
+                "list": ["Item one", "Item two", "Item three"]
+              }
+            },
+            {
+              "header": {
+                "iconUrl": "https://placehold.co/400",
+                "title": "Title 03"
+              },
+              "body": {
+                "list": ["Item one", "Item two", "Item three"]
+              }
+            },
+            {
+              "header": {
+                "iconUrl": "https://placehold.co/400",
+                "title": "Title 04"
+              },
+              "body": {
+                "list": ["Item one", "Item two", "Item three"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "downloadBSI": {
+      "title": "BSI Wallet",
+      "excerpt": [
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+      ],
+      "downloadTitle": "Download now on"
+    },
+    "partnership": {
+      "supported": {
+        "title": "Supported By"
+      },
+      "strategic": {
+        "title": "Strategic Partners"
+      },
+      "media": {
+        "title": "Media"
+      }
+    },
+    "joinUs": {
+      "partners": {
+        "title": "Partners",
+        "excerpt": [
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+        ],
+        "button": "Learn More"
+      },
+      "ambassadors": {
+        "title": "Ambassadors",
+        "excerpt": [
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim vitae quidem blanditiis labore, porro fuga. Ipsam in officia saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut dicta atque?"
+        ],
+        "button": "Learn More"
+      }
+    }
   }
 }

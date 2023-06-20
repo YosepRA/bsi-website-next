@@ -1,127 +1,22 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import styled from 'styled-components';
 
-import type { RoadmapData } from 'types/home';
-import * as Styled from './styled/Roadmap.styled.ts';
+import DictionaryContext from 'components/context/Dictionary.context.tsx';
 import RoadmapItem from './RoadmapItem.tsx';
 
-const fakeRoadmapData: RoadmapData = {
-  '2023': [
-    {
-      title: 'Q1 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q2 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q3 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q4 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-  ],
-  '2024': [
-    {
-      title: 'Q1 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q2 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q3 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q4 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-  ],
-  '2025': [
-    {
-      title: 'Q1 - Masterplan 2025',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q2 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q3 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-    {
-      title: 'Q4 - Masterplan',
-      list: [
-        'Create a masterplan',
-        'Execute masterplan',
-        'Evaluate masterplan',
-      ],
-    },
-  ],
-};
+import * as Styled from './styled/Roadmap.styled.ts';
 
 const Roadmap = function RoadmapComponent() {
+  const {
+    home: {
+      roadmap: { items },
+    },
+  } = useContext(DictionaryContext);
+
   return (
     <Styled.RoadmapStyled className="roadmap">
       <Container>
@@ -133,22 +28,26 @@ const Roadmap = function RoadmapComponent() {
 
         <Row>
           <Col>
-            {Object.keys(fakeRoadmapData).map((year, index) => (
-              <Styled.RoadmapYear key={year} className="roadmap__year">
+            {items.map(({ titleBox, list }, index) => (
+              <Styled.RoadmapYear
+                key={titleBox.title}
+                className="roadmap__year"
+              >
                 <Row>
                   <Col xs={{ order: (index + 1) % 2 ? 1 : 2 }} lg={6}>
-                    <Styled.RoadmapIntro className="roadmap__intro">
-                      <h2>{year}</h2>
-                    </Styled.RoadmapIntro>
+                    <Styled.RoadmapTitleBox className="roadmap__title-box">
+                      <h2>{titleBox.title}</h2>
+                    </Styled.RoadmapTitleBox>
                   </Col>
 
                   <Col xs={{ order: (index + 1) % 2 ? 2 : 1 }} lg={6}>
                     <Styled.RoadmapList className="roadmap__list">
-                      {fakeRoadmapData[year as keyof RoadmapData].map(
-                        (data) => (
-                          <RoadmapItem key={data.title} data={data} />
-                        ),
-                      )}
+                      {list.map((data) => (
+                        <RoadmapItem
+                          key={`${titleBox.title}-${data.header.title}`}
+                          data={data}
+                        />
+                      ))}
                     </Styled.RoadmapList>
                   </Col>
                 </Row>

@@ -11,7 +11,7 @@ import * as Styled from './styled/JoinUs.styled.ts';
 
 const JoinUs = function JoinUsComponent() {
   return (
-    <Styled.JoinUs className="join-us">
+    <Styled.JoinUs id="join-us" className="join-us">
       <Container>
         <Row>
           <Col>

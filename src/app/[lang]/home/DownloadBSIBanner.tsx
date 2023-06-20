@@ -13,7 +13,7 @@ import * as Styled from './styled/DownloadBSI.styled.ts';
 
 const DownloadBSIBanner = function DownloadBSIBannerComponent() {
   return (
-    <Styled.DownloadBSI className="download-bsi">
+    <Styled.DownloadBSI id="download-bsi" className="download-bsi">
       <Container>
         <Row className="download-bsi__row">
           <Col lg={6}>

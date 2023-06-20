@@ -3,6 +3,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+  * {
+    scroll-behavior: smooth;
+  }
+
   // Bootstrap overrides
   @media screen and (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {

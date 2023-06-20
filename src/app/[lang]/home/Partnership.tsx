@@ -9,7 +9,7 @@ import * as Styled from './styled/Partnership.styled.ts';
 
 const Partnership = function PartnershipComponent() {
   return (
-    <Styled.Partnership className="partnership">
+    <Styled.Partnership id="partnership" className="partnership">
       <Container>
         <Row>
           <Col>

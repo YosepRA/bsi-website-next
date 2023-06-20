@@ -12,7 +12,7 @@ import EcosystemCard from './EcosystemCard.tsx';
 
 const Ecosystem = function EcosystemComponent() {
   return (
-    <Styled.EcosystemStyled className="ecosystem">
+    <Styled.EcosystemStyled id="ecosystem" className="ecosystem">
       <Container>
         <Row className="ecosystem__row">
           <Col lg={6}>
