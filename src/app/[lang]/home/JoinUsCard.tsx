@@ -1,5 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 
+import joinUsPartnersIcon from 'assets/img/join-us-partners.svg';
 import DemoImage from 'components/styled/DemoImage.styled.ts';
 import Button from 'components/styled/Button.styled.ts';
 
@@ -9,7 +11,9 @@ const JoinUsCard = function JoinUsCardComponent() {
   return (
     <Styled.JoinUsCard className="join-us__card">
       <div className="join-us__card-meta">
-        <DemoImage width={60} height={60} />
+        <div className="join-us__card-icon">
+          <Image src={joinUsPartnersIcon} alt="Partners" />
+        </div>
 
         <h3 className="join-us__card-title">Title</h3>
       </div>
@@ -27,7 +31,9 @@ const JoinUsCard = function JoinUsCardComponent() {
       </div>
 
       <div className="join-us__card-footer">
-        <Button>Button</Button>
+        <Button color="secondary" className="join-us__card-footer__button">
+          Button
+        </Button>
       </div>
     </Styled.JoinUsCard>
   );

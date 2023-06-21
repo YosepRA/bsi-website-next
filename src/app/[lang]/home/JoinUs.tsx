@@ -20,11 +20,11 @@ const JoinUs = function JoinUsComponent() {
         </Row>
 
         <Row>
-          <Col lg={6}>
+          <Col lg={6} className="join-us__col">
             <JoinUsCard />
           </Col>
 
-          <Col lg={6}>
+          <Col lg={6} className="join-us__col">
             <JoinUsCard />
           </Col>
         </Row>

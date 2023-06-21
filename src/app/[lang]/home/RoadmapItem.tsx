@@ -17,17 +17,15 @@ const RoadmapItem = function RoadmapItemComponent({
 
   return (
     <Styled.RoadmapItem className="roadmap__item">
-      <h3>
-        <Styled.RoadmapItemToggle
-          type="button"
-          onClick={handleToggle}
-          className="roadmap__item-toggle"
-        >
-          <DemoImage width={50} height={50} />
+      <Styled.RoadmapItemToggle
+        type="button"
+        onClick={handleToggle}
+        className="roadmap__item-toggle"
+      >
+        <span className="roadmap__item-toggle__icon">Icon</span>
 
-          <h4 className="roadmap__item-toggle__title">{header.title}</h4>
-        </Styled.RoadmapItemToggle>
-      </h3>
+        <h4 className="roadmap__item-toggle__title">{header.title}</h4>
+      </Styled.RoadmapItemToggle>
 
       <Styled.RoadmapItemBody
         open={open}

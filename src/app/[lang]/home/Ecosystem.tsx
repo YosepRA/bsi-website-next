@@ -6,9 +6,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import BSILogoVerticalText from 'assets/img/bsi-logo-vertical-text.png';
-import * as Styled from './styled/Ecosystem.styled.ts';
+import BSILogoVerticalText from 'assets/img/bsi-logo-vertical-text.svg';
 import EcosystemCard from './EcosystemCard.tsx';
+
+import * as Styled from './styled/Ecosystem.styled.ts';
 
 const Ecosystem = function EcosystemComponent() {
   return (
@@ -16,7 +17,7 @@ const Ecosystem = function EcosystemComponent() {
       <Container>
         <Row className="ecosystem__row">
           <Col lg={6}>
-            <Styled.EcosystemBSI>
+            <Styled.EcosystemBSI className="ecosystem-bsi">
               <Image
                 src={BSILogoVerticalText}
                 alt="Bali Social Integrated"
@@ -32,11 +33,11 @@ const Ecosystem = function EcosystemComponent() {
           </Col>
 
           <Col lg={6}>
-            <div className="ecosystem__members">
+            <Styled.EcosystemMembers className="ecosystem-members">
               <EcosystemCard />
               <EcosystemCard />
               <EcosystemCard />
-            </div>
+            </Styled.EcosystemMembers>
           </Col>
         </Row>
       </Container>

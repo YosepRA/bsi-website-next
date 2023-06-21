@@ -1,11 +1,24 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faTelegram,
+  faInstagramSquare,
+  faMedium,
+  faYoutube,
+  faTwitter,
+  faFacebook,
+  faTiktok,
+} from '@fortawesome/free-brands-svg-icons';
 
+import bannerGraphic from 'assets/img/banner-graphic.png';
 import DemoImage from 'components/styled/DemoImage.styled.ts';
+
 import * as Styled from './styled/Banner.styled.ts';
 
 const Banner = function BannerComponent() {
@@ -13,28 +26,106 @@ const Banner = function BannerComponent() {
     <Styled.Banner className="banner">
       <Container>
         <Row className="banner__row">
-          <Col lg={6}>
+          <Col xs={{ order: 2 }} lg={6}>
             <Styled.BannerInfo className="banner__info">
-              <h1>
-                Bali
-                <br />
-                Social
-                <br />
-                Integrated
-              </h1>
+              <h1 className="banner__info-title">Bali Social Integrated</h1>
 
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
-                vitae quidem blanditiis labore, porro fuga. Ipsam in officia
-                saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque ut
-                dicta atque?
-              </p>
+              <div className="banner__info-excerpt">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
+                  vitae quidem blanditiis labore, porro fuga. Ipsam in officia
+                  saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque
+                  ut dicta atque?
+                </p>
+              </div>
+
+              <div className="banner__info-social-media">
+                <Row className="banner__info-social-media__row gy-2">
+                  <Col xs={3} className="banner__info-social-media__column">
+                    <a
+                      href="https://t.me/CFBSI"
+                      className="banner__info-social-media__item"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faTelegram} />
+                    </a>
+                  </Col>
+
+                  <Col xs={4} className="banner__info-social-media__column">
+                    <a
+                      href="https://instagram.com/bsitoken"
+                      className="banner__info-social-media__item"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faInstagramSquare} />
+                    </a>
+                  </Col>
+
+                  <Col xs={3} className="banner__info-social-media__column">
+                    <a
+                      href="https://balisocialintegrated.medium.com"
+                      className="banner__info-social-media__item"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faMedium} />
+                    </a>
+                  </Col>
+
+                  <Col xs={3} className="banner__info-social-media__column">
+                    <a
+                      href="https://www.youtube.com/channel/UCIS_7jaW8z-rzq-FXawOTMQ"
+                      className="banner__info-social-media__item"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faYoutube} />
+                    </a>
+                  </Col>
+
+                  <Col xs={3} className="banner__info-social-media__column">
+                    <a
+                      href="https://twitter.com/bsitoken_"
+                      className="banner__info-social-media__item"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                  </Col>
+
+                  <Col xs={3} className="banner__info-social-media__column">
+                    <a
+                      href="https://www.facebook.com/people/Bsi-Token/pfbid02Wf17qGcRn9i9LJqPucybBvgSHCEcKiRGLd4gHX8uqNEb5Nj1ZrGPJngTWrFZge29l/"
+                      className="banner__info-social-media__item"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                  </Col>
+
+                  <Col xs={3} className="banner__info-social-media__column">
+                    <a
+                      href="https://www.tiktok.com/@cfbsi"
+                      className="banner__info-social-media__item"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faTiktok} />
+                    </a>
+                  </Col>
+                </Row>
+              </div>
             </Styled.BannerInfo>
           </Col>
 
-          <Col lg={6}>
+          <Col xs={{ order: 1 }} lg={6}>
             <Styled.BannerImage className="banner__image">
-              <DemoImage width={300} height={300} center />
+              {/* <DemoImage width={300} height={300} center /> */}
+              <Image src={bannerGraphic} alt="Bali Social Integrated banner" />
             </Styled.BannerImage>
           </Col>
         </Row>

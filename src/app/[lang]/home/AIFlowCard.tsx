@@ -6,14 +6,20 @@ import * as Styled from './styled/AIFlow.styled.ts';
 const AIFlowCard = function AIFlowCardComponent() {
   return (
     <Styled.AIFlowCard className="ai-flow__card">
-      <DemoImage width={70} height={70} />
+      <div className="ai-flow__card-icon">
+        <h2>Title</h2>
+      </div>
 
-      <h4 className="ai-flow__card-title">Title</h4>
+      <div className="ai-flow__card-body">
+        <h4 className="ai-flow__card-title">LOREM IPSUM DOLOR SIT AMET</h4>
 
-      <p className="ai-flow__card-excerpt">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
-        incidunt.
-      </p>
+        <div className="ai-flow__card-excerpt">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+            incidunt.
+          </p>
+        </div>
+      </div>
     </Styled.AIFlowCard>
   );
 };

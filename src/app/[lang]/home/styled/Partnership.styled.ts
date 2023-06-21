@@ -3,12 +3,18 @@ import styled from 'styled-components';
 import device from 'lib/styled-components/device-breakpoints.ts';
 
 export const Partnership = styled.section`
-  padding: 82px 0;
+  padding: 44px 0 52px;
+  background-color: ${({ theme }) => theme.colors.bg.secondary};
+
+  img {
+    width: 80%;
+    height: auto;
+  }
 
   .partnership {
     &__title {
-      margin-bottom: 24px;
-      font-size: 24px;
+      margin-bottom: 28px;
+      font-size: 20px;
       font-weight: 600;
       text-align: center;
     }
@@ -25,9 +31,17 @@ export const Partnership = styled.section`
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 60px;
+        min-height: 60px;
         background-color: #ccc;
         border-radius: 8px;
+      }
+    }
+  }
+
+  @media screen and (${device.lg}) {
+    .partnership {
+      &__title {
+        font-size: 24px;
       }
     }
   }

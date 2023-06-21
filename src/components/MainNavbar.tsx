@@ -2,13 +2,14 @@
 
 import React, { useContext } from 'react';
 import { useParams } from 'next/navigation';
-import Link from 'next/link';
 import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-import BSILogoHorizontalText from 'assets/img/bsi-logo-horizonal-text.png';
+import BSILogoHorizontalText from 'assets/img/bsi-logo-horizontal-text.svg';
 
 import DictionaryContext from 'components/context/Dictionary.context.tsx';
 import LangSwitch from './LangSwitch.tsx';
@@ -24,7 +25,7 @@ const MainNavbar = function MainNavbarComponent() {
   } = useContext(DictionaryContext);
 
   return (
-    <Styled.MainNavbar bg="light" expand="lg" className="main-navbar">
+    <Styled.MainNavbar fixed="top" expand="lg" className="main-navbar">
       <Container>
         <Navbar.Brand href={`/${lang}`} className="main-navbar__brand">
           <Image
@@ -34,10 +35,16 @@ const MainNavbar = function MainNavbarComponent() {
           />
         </Navbar.Brand>
 
-        <Navbar.Toggle
-          aria-controls="main-navbar"
-          className="main-navbar__toggle"
-        />
+        <div className="main-navbar__controls">
+          <LangSwitch />
+
+          <Navbar.Toggle
+            aria-controls="main-navbar"
+            className="main-navbar__toggle"
+          >
+            <FontAwesomeIcon icon={faBars} />
+          </Navbar.Toggle>
+        </div>
 
         <Navbar.Collapse id="main-navbar" className="main-navbar__collapse">
           <Nav className="main-navbar__nav">
@@ -50,17 +57,20 @@ const MainNavbar = function MainNavbarComponent() {
             <Nav.Link href="#partnership" className="main-navbar__nav-link">
               {partners}
             </Nav.Link>
-            <Nav.Link href="#join-us" className="main-navbar__nav-link">
+            <Nav.Link
+              href="#join-us"
+              className="main-navbar__nav-link main-navbar__nav-link--join-us"
+            >
               {joinUs}
             </Nav.Link>
             <Nav.Link
               href="#"
               className="main-navbar__nav-link main-navbar__nav-link--whitepaper"
             >
-              {whitepaper}
+              <span className="main-navbar__nav-link__whitepaper">
+                {whitepaper}
+              </span>
             </Nav.Link>
-
-            <LangSwitch />
           </Nav>
         </Navbar.Collapse>
       </Container>

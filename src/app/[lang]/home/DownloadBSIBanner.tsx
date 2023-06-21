@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import BSIWalletMockup from 'assets/img/BSI-Wallet-Mockup.png';
 import AppleStoreBadge from 'assets/img/apple-store-badge.svg';
 import GoogleStoreBadge from 'assets/img/google-play-badge.png';
 
@@ -17,7 +18,11 @@ const DownloadBSIBanner = function DownloadBSIBannerComponent() {
       <Container>
         <Row className="download-bsi__row">
           <Col lg={6}>
-            <Styled.DownloadBSIImage />
+            <Image
+              src={BSIWalletMockup}
+              alt="BSI Wallet"
+              className="download-bsi__image"
+            />
           </Col>
 
           <Col lg={6}>

@@ -10,11 +10,11 @@ const EcosystemCard = function EcosystemCardComponent() {
   return (
     <Styled.EcosystemCard className="ecosystem-card">
       <Row className="ecosystem-card__row">
-        <Col xs={3}>
-          <DemoImage width={80} height={80} center />
-        </Col>
+        <div className="ecosystem-card__icon">
+          <h2>Logo</h2>
+        </div>
 
-        <Col xs={9}>
+        <Col xs={12}>
           <div className="ecosystem-card__info">
             <h4 className="ecosystem-card__info-title">Title</h4>
             <p className="ecosystem-card__info-excerpt">

@@ -10,23 +10,23 @@ import AIFlowCard from './AIFlowCard.tsx';
 
 const AIFlow = function AIFlowComponent() {
   return (
-    <Styled.AIFlowStyled className="ai-flow">
+    <Styled.AIFlow className="ai-flow">
       <Container>
         <Row>
-          <Col lg={4}>
+          <Col lg={4} className="ai-flow__col">
             <AIFlowCard />
           </Col>
 
-          <Col lg={4}>
+          <Col lg={4} className="ai-flow__col">
             <AIFlowCard />
           </Col>
 
-          <Col lg={4}>
+          <Col lg={4} className="ai-flow__col">
             <AIFlowCard />
           </Col>
         </Row>
       </Container>
-    </Styled.AIFlowStyled>
+    </Styled.AIFlow>
   );
 };
 

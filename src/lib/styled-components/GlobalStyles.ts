@@ -2,9 +2,24 @@
 
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
+import type { ThemeType } from 'lib/styled-components/ThemeProvider.tsx';
+
+interface GlobalProps {
+  theme: ThemeType;
+}
+
+const GlobalStyles = createGlobalStyle<GlobalProps>`
   * {
     scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: ${({ theme }) => theme.colors.bg.primary};
+    color: ${({ theme }) => theme.colors.body.white};
+  }
+
+  p {
+    color: ${({ theme }) => theme.colors.body.grey};
   }
 
   // Bootstrap overrides

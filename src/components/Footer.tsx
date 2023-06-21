@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTelegram,
-  faInstagram,
+  faInstagramSquare,
   faMedium,
   faYoutube,
   faTwitter,
@@ -17,7 +17,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-import BSILogoHorizontalText from 'assets/img/bsi-logo-horizonal-text.png';
+import BSILogoHorizontalText from 'assets/img/bsi-logo-horizontal-text.svg';
+import slowMist from 'assets/img/slowmist.svg';
+import digifinex from 'assets/img/digifinex-white.png';
+import coinsbit from 'assets/img/coinsbit-white.png';
+import coinmarketcap from 'assets/img/cmc-white.png';
+import coingecko from 'assets/img/coingecko-white.png';
 
 import * as Styled from './styled/Footer.styled.ts';
 
@@ -82,9 +87,11 @@ const Footer = function FooterComponent() {
                   Audited By
                 </h2>
 
-                <div className="page-footer__media__audit-box">
-                  SlowMist logo
-                </div>
+                <Image
+                  src={slowMist}
+                  alt="SlowMist"
+                  className="page-footer__media__audit-logo"
+                />
               </div>
 
               <div className="page-footer__media__listing">
@@ -94,25 +101,45 @@ const Footer = function FooterComponent() {
 
                 <ul className="page-footer__media__listing-list">
                   <Row className="g-3">
-                    <Col lg={6}>
-                      <div className="page-footer__media__listing-list-item">
-                        One
-                      </div>
+                    <Col xs={6}>
+                      <a
+                        href="https://www.digifinex.com/en-ww/trade/USDT/BSI"
+                        className="page-footer__media__listing-list-item"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image src={digifinex} alt="Digifinex" />
+                      </a>
                     </Col>
-                    <Col lg={6}>
-                      <div className="page-footer__media__listing-list-item">
-                        Two
-                      </div>
+                    <Col xs={6}>
+                      <a
+                        href="https://coinsbit.io/trade/BSI_USDT"
+                        className="page-footer__media__listing-list-item"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image src={coinsbit} alt="Coinsbit" />
+                      </a>
                     </Col>
-                    <Col lg={6}>
-                      <div className="page-footer__media__listing-list-item">
-                        Three
-                      </div>
+                    <Col xs={6}>
+                      <a
+                        href="https://coinmarketcap.com/currencies/bali-social-integrated"
+                        className="page-footer__media__listing-list-item"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image src={coinmarketcap} alt="CoinMarketCap" />
+                      </a>
                     </Col>
-                    <Col lg={6}>
-                      <div className="page-footer__media__listing-list-item">
-                        Four
-                      </div>
+                    <Col xs={6}>
+                      <a
+                        href="https://www.coingecko.com/en/coins/bali-social-integrated"
+                        className="page-footer__media__listing-list-item"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image src={coingecko} alt="CoinGecko" />
+                      </a>
                     </Col>
                   </Row>
                 </ul>
@@ -138,12 +165,12 @@ const Footer = function FooterComponent() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon icon={faInstagram} />
+                    <FontAwesomeIcon icon={faInstagramSquare} />
                   </a>
                 </li>
                 <li className="page-footer__social-media__list-item">
                   <a
-                    href="https://balisocialintegrated.medium.com/"
+                    href="https://balisocialintegrated.medium.com"
                     target="_blank"
                     rel="noreferrer"
                   >

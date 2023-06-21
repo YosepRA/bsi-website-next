@@ -43,7 +43,7 @@ const LangSwitch = function LangSwitchComponent() {
   };
 
   return (
-    <NavDropdown title={lang.toUpperCase()} id="lang-switch">
+    <NavDropdown title={lang} id="lang-switch">
       {locales.map((locale) => {
         const { longText } = getItemText(locale);
 
