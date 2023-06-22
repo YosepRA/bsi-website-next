@@ -13,15 +13,15 @@ const AIFlow = function AIFlowComponent() {
     <Styled.AIFlow className="ai-flow">
       <Container>
         <Row>
-          <Col lg={4} className="ai-flow__col">
+          <Col md={4} className="ai-flow__col">
             <AIFlowCard />
           </Col>
 
-          <Col lg={4} className="ai-flow__col">
+          <Col md={4} className="ai-flow__col">
             <AIFlowCard />
           </Col>
 
-          <Col lg={4} className="ai-flow__col">
+          <Col md={4} className="ai-flow__col">
             <AIFlowCard />
           </Col>
         </Row>

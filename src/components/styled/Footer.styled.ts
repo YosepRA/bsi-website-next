@@ -142,22 +142,51 @@ export const Footer = styled.footer`
     }
   }
 
+  @media screen and (${device.md}) {
+    .page-footer {
+      &__row {
+        &--one {
+          justify-content: space-between;
+        }
+      }
+
+      &__social-media {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   @media screen and (${device.lg}) {
     .page-footer {
       &__info {
+        margin-bottom: 0;
+
         &-logo {
           width: 240px;
         }
 
         &-excerpt {
           margin-bottom: 48px;
+          font-size: 16px;
+        }
+
+        &-contact {
+          font-size: 16px;
         }
       }
 
       &__navigation {
+        margin-bottom: 0;
+
         &-title {
           margin-bottom: 24px;
           font-size: 24px;
+        }
+      }
+
+      &__media {
+        &__audit {
+          margin-bottom: 37px;
         }
       }
     }
@@ -177,10 +206,10 @@ export const FooterCopyright = styled.div`
     }
   }
 
-  @media screen and (${device.lg}) {
+  @media screen and (${device.md}) {
     .page-footer__copyright {
       &-text {
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }

@@ -12,18 +12,48 @@ export const JoinUs = styled.section`
       }
     }
 
-    &__title {
+    &__intro {
       margin-bottom: 28px;
-      font-size: 34px;
-      font-weight: 700;
-      text-align: center;
+
+      &-title {
+        margin-bottom: 16px;
+        font-size: 34px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      &-excerpt {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media screen and (${device.md}) {
+    padding: 120px 0 76px;
+
+    .join-us {
+      &__intro {
+        margin-bottom: 48px;
+      }
     }
   }
 
   @media screen and (${device.lg}) {
+    padding: 148px 0 114px;
+
     .join-us {
-      &__title {
-        font-size: 40px;
+      &__intro {
+        &-title {
+          margin-bottom: 24px;
+          font-size: 48px;
+        }
+
+        &-excerpt {
+          width: 75%;
+          margin: 0 auto;
+          font-size: 16px;
+        }
       }
     }
   }
@@ -33,7 +63,6 @@ export const JoinUsCard = styled.article`
   position: relative;
   width: 90%;
   margin-left: auto;
-  /* padding: 27px 16px 16px 50px; */
   padding: 27px 16px 16px;
   background-color: ${({ theme }) => theme.colors.bg.secondary};
   border-radius: 16px;
@@ -70,6 +99,7 @@ export const JoinUsCard = styled.article`
     &-body {
       margin-bottom: 36px;
       padding-left: 34px;
+      font-size: 13px;
     }
 
     &-footer {
@@ -79,6 +109,54 @@ export const JoinUsCard = styled.article`
 
       &__button {
         width: 100%;
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media screen and (${device.md}) {
+    width: 65%;
+    margin: 0 auto;
+    padding-top: 45px;
+
+    .join-us__card {
+      &-icon {
+        width: 80px;
+        height: 80px;
+        top: 20px;
+        left: 0;
+        transform: translateX(-60%);
+
+        img {
+          width: 75%;
+          height: auto;
+        }
+      }
+
+      &-title {
+        font-size: 28px;
+      }
+
+      &-body {
+        font-size: 15px;
+      }
+
+      &-footer {
+        &__button {
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  @media screen and (${device.lg}) {
+    width: 84%;
+    padding-top: 35px;
+
+    .join-us__card {
+      &-body {
+        margin-bottom: 43px;
+        font-size: 16px;
       }
     }
   }

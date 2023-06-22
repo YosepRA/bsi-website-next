@@ -20,13 +20,21 @@ const GlobalStyles = createGlobalStyle<GlobalProps>`
 
   p {
     color: ${({ theme }) => theme.colors.body.grey};
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   // Bootstrap overrides
+  .navbar-nav .nav-link.active {
+    color: inherit;
+    text-decoration: underline;
+  }
+
   @media screen and (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 0 28px;
     }
   }
 `;

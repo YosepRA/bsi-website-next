@@ -42,7 +42,7 @@ const DownloadBSIBanner = function DownloadBSIBannerComponent() {
 
                 <div className="download-bsi__info__download-list">
                   <a
-                    href="https://www.google.com"
+                    href="https://apps.apple.com/app/id1606327952"
                     target="_blank"
                     rel="noreferrer"
                     className="download-bsi__info__download-item"
@@ -54,7 +54,7 @@ const DownloadBSIBanner = function DownloadBSIBannerComponent() {
                   </a>
 
                   <a
-                    href="https://www.google.com"
+                    href="https://play.google.com/store/apps/details?id=io.bsin.wallet"
                     target="_blank"
                     rel="noreferrer"
                     className="download-bsi__info__download-item"

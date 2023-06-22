@@ -12,8 +12,12 @@ export const EcosystemStyled = styled.section`
     }
   }
 
+  @media screen and (${device.md}) {
+    padding: 60px 0 50px;
+  }
+
   @media screen and (${device.lg}) {
-    padding: 82px 0;
+    padding: 74px 0 80px;
   }
 `;
 
@@ -35,11 +39,33 @@ export const EcosystemBSI = styled.div`
     }
   }
 
+  @media screen and (${device.md}) {
+    margin-bottom: 64px;
+
+    .ecosystem-bsi {
+      &__logo {
+        width: 31%;
+        margin-bottom: 32px;
+      }
+
+      &__excerpt {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 15px;
+      }
+    }
+  }
+
   @media screen and (${device.lg}) {
     .ecosystem-bsi {
       &__logo {
-        width: 56%;
-        margin-bottom: 56px;
+        width: 40%;
+        margin-bottom: 36px;
+      }
+
+      &__excerpt {
+        width: 100%;
+        font-size: 16px;
       }
     }
   }
@@ -95,6 +121,46 @@ export const EcosystemCard = styled.article`
         margin-bottom: 0;
         font-size: 13px;
         word-wrap: break-word;
+      }
+    }
+  }
+
+  @media screen and (${device.md}) {
+    width: 74%;
+    margin-right: 32px;
+
+    .ecosystem-card {
+      &__icon {
+        top: 50%;
+        left: 0;
+        width: 120px;
+        transform: translate(-70%, -50%);
+      }
+
+      &__info {
+        &-title {
+          font-size: 22px;
+        }
+
+        &-excerpt {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  @media screen and (${device.lg}) {
+    width: 80%;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    .ecosystem-card {
+      &__info {
+        &-excerpt {
+          font-size: 16px;
+        }
       }
     }
   }

@@ -26,9 +26,18 @@ const Banner = function BannerComponent() {
     <Styled.Banner className="banner">
       <Container>
         <Row className="banner__row">
-          <Col xs={{ order: 2 }} lg={6}>
+          <Col xs={{ order: 2 }} lg={{ span: 6, order: 1 }}>
             <Styled.BannerInfo className="banner__info">
-              <h1 className="banner__info-title">Bali Social Integrated</h1>
+              <h1 className="banner__info-title banner__info-title--mobile">
+                Bali Social Integrated
+              </h1>
+              <h1 className="banner__info-title banner__info-title--desktop">
+                Bali
+                <br />
+                Social
+                <br />
+                Integrated
+              </h1>
 
               <div className="banner__info-excerpt">
                 <p>
@@ -40,8 +49,12 @@ const Banner = function BannerComponent() {
               </div>
 
               <div className="banner__info-social-media">
-                <Row className="banner__info-social-media__row gy-2">
-                  <Col xs={3} className="banner__info-social-media__column">
+                <Row className="banner__info-social-media__row gy-2 gy-md-0 gx-md-4 gx-lg-0">
+                  <Col
+                    xs={3}
+                    md="auto"
+                    className="banner__info-social-media__column"
+                  >
                     <a
                       href="https://t.me/CFBSI"
                       className="banner__info-social-media__item"
@@ -52,7 +65,11 @@ const Banner = function BannerComponent() {
                     </a>
                   </Col>
 
-                  <Col xs={4} className="banner__info-social-media__column">
+                  <Col
+                    xs={4}
+                    md="auto"
+                    className="banner__info-social-media__column"
+                  >
                     <a
                       href="https://instagram.com/bsitoken"
                       className="banner__info-social-media__item"
@@ -63,7 +80,11 @@ const Banner = function BannerComponent() {
                     </a>
                   </Col>
 
-                  <Col xs={3} className="banner__info-social-media__column">
+                  <Col
+                    xs={3}
+                    md="auto"
+                    className="banner__info-social-media__column"
+                  >
                     <a
                       href="https://balisocialintegrated.medium.com"
                       className="banner__info-social-media__item"
@@ -74,7 +95,11 @@ const Banner = function BannerComponent() {
                     </a>
                   </Col>
 
-                  <Col xs={3} className="banner__info-social-media__column">
+                  <Col
+                    xs={3}
+                    md="auto"
+                    className="banner__info-social-media__column"
+                  >
                     <a
                       href="https://www.youtube.com/channel/UCIS_7jaW8z-rzq-FXawOTMQ"
                       className="banner__info-social-media__item"
@@ -85,7 +110,11 @@ const Banner = function BannerComponent() {
                     </a>
                   </Col>
 
-                  <Col xs={3} className="banner__info-social-media__column">
+                  <Col
+                    xs={3}
+                    md="auto"
+                    className="banner__info-social-media__column"
+                  >
                     <a
                       href="https://twitter.com/bsitoken_"
                       className="banner__info-social-media__item"
@@ -96,7 +125,11 @@ const Banner = function BannerComponent() {
                     </a>
                   </Col>
 
-                  <Col xs={3} className="banner__info-social-media__column">
+                  <Col
+                    xs={3}
+                    md="auto"
+                    className="banner__info-social-media__column"
+                  >
                     <a
                       href="https://www.facebook.com/people/Bsi-Token/pfbid02Wf17qGcRn9i9LJqPucybBvgSHCEcKiRGLd4gHX8uqNEb5Nj1ZrGPJngTWrFZge29l/"
                       className="banner__info-social-media__item"
@@ -107,7 +140,11 @@ const Banner = function BannerComponent() {
                     </a>
                   </Col>
 
-                  <Col xs={3} className="banner__info-social-media__column">
+                  <Col
+                    xs={3}
+                    md="auto"
+                    className="banner__info-social-media__column"
+                  >
                     <a
                       href="https://www.tiktok.com/@cfbsi"
                       className="banner__info-social-media__item"
@@ -122,9 +159,8 @@ const Banner = function BannerComponent() {
             </Styled.BannerInfo>
           </Col>
 
-          <Col xs={{ order: 1 }} lg={6}>
+          <Col xs={{ order: 1 }} lg={{ span: 6, order: 2 }}>
             <Styled.BannerImage className="banner__image">
-              {/* <DemoImage width={300} height={300} center /> */}
               <Image src={bannerGraphic} alt="Bali Social Integrated banner" />
             </Styled.BannerImage>
           </Col>

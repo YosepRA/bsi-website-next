@@ -3,15 +3,16 @@ import styled from 'styled-components';
 import device from 'lib/styled-components/device-breakpoints.ts';
 
 export const Partnership = styled.section`
-  padding: 44px 0 52px;
+  padding: 32px 0;
   background-color: ${({ theme }) => theme.colors.bg.secondary};
 
-  img {
-    width: 80%;
-    height: auto;
-  }
-
   .partnership {
+    &__row {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
     &__title {
       margin-bottom: 28px;
       font-size: 20px;
@@ -31,9 +32,37 @@ export const Partnership = styled.section`
         justify-content: center;
         align-items: center;
         width: 100%;
-        min-height: 60px;
-        background-color: #ccc;
+        height: 64px;
+        padding: 16px;
+        background-color: ${({ theme }) => theme.colors.primary.surface};
         border-radius: 8px;
+
+        img {
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (${device.md}) {
+    padding: 100px 0;
+
+    .partnership {
+      &__row {
+        &:not(:last-child) {
+          margin-bottom: 46px;
+        }
+      }
+
+      &__title {
+        font-size: 34px;
+      }
+
+      &__list {
+        &-item {
+          height: 82px;
+        }
       }
     }
   }
@@ -47,12 +76,53 @@ export const Partnership = styled.section`
   }
 `;
 
-export const PartnershipSupported = styled.div`
-  margin-bottom: 72px;
+export const PartnershipIntro = styled.div`
+  .partnership__intro {
+    &-title {
+      margin-bottom: 12px;
+      font-size: 34px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &-excerpt {
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (${device.md}) {
+    .partnership__intro {
+      &-title {
+        margin-bottom: 16px;
+        font-size: 40px;
+      }
+
+      &-excerpt {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 17px;
+      }
+    }
+  }
+
+  @media screen and (${device.lg}) {
+    .partnership__intro {
+      &-title {
+        margin-bottom: 24px;
+        font-size: 48px;
+      }
+
+      &-excerpt {
+        width: 75%;
+        font-size: 16px;
+      }
+    }
+  }
 `;
 
-export const PartnershipStrategic = styled.div`
-  margin-bottom: 72px;
-`;
+export const PartnershipSupported = styled.div``;
+
+export const PartnershipStrategic = styled.div``;
 
 export const PartnershipMedia = styled.div``;

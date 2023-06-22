@@ -17,10 +17,13 @@ const EcosystemCard = function EcosystemCardComponent() {
         <Col xs={12}>
           <div className="ecosystem-card__info">
             <h4 className="ecosystem-card__info-title">Title</h4>
-            <p className="ecosystem-card__info-excerpt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque illum nihil dicta architecto. Similique, atque.
-            </p>
+
+            <div className="ecosystem-card__info-excerpt">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque illum nihil dicta architecto. Similique, atque.
+              </p>
+            </div>
           </div>
         </Col>
       </Row>

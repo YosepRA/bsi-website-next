@@ -24,11 +24,13 @@ const Ecosystem = function EcosystemComponent() {
                 className="ecosystem-bsi__logo"
               />
 
-              <p className="ecosystem-bsi__excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                quibusdam omnis, at aut tenetur temporibus. Iure sint modi
-                laudantium? Officiis.
-              </p>
+              <div className="ecosystem-bsi__excerpt">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  quibusdam omnis, at aut tenetur temporibus. Iure sint modi
+                  laudantium? Officiis.
+                </p>
+              </div>
             </Styled.EcosystemBSI>
           </Col>
 

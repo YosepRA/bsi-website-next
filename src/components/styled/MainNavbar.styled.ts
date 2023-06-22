@@ -21,8 +21,8 @@ export const MainNavbar = styled(Navbar)`
     }
 
     &__toggle {
-      border: 2px solid white;
-      color: white;
+      border: none;
+      color: #fff;
     }
 
     &__collapse {
@@ -30,7 +30,6 @@ export const MainNavbar = styled(Navbar)`
       top: 56px;
       left: 0;
       width: 100%;
-      padding: 0 16px;
       background-color: #5e5e66;
     }
 
@@ -61,6 +60,7 @@ export const MainNavbar = styled(Navbar)`
           color: ${({ theme }) => theme.colors.body.black};
           text-align: center;
           font-weight: 700;
+          line-height: 1;
           transition: all 200ms ease-out;
 
           &:hover {
@@ -76,20 +76,76 @@ export const MainNavbar = styled(Navbar)`
     }
   }
 
+  @media screen and (${device.md}) {
+    .main-navbar {
+      &__nav {
+        &-link {
+          &--whitepaper {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+          }
+
+          &__whitepaper {
+            width: 320px;
+            padding: 14px 32px;
+          }
+        }
+      }
+    }
+  }
+
   @media screen and (${device.lg}) {
+    padding: 16px 0;
+
     .main-navbar {
       &__brand {
+        padding: 0;
+
         &-logo {
           width: 174px;
         }
       }
 
-      &__nav {
-        &-link {
-          padding-left: 16px;
-          padding-right: 16px;
+      &__controls {
+        order: 2;
+      }
+
+      &__collapse {
+        position: static;
+        background-color: ${({ theme }) => theme.colors.bg.secondary};
+
+        .container {
+          padding: 0;
         }
       }
+
+      &__nav {
+        align-items: center;
+
+        &-link {
+          padding: 0 28px;
+
+          &:not(:last-child) {
+            border: none;
+          }
+
+          &--whitepaper {
+            padding: 0 39px;
+          }
+
+          &__whitepaper {
+            width: 159px;
+            padding: 14px 32px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (${device.xl}) {
+    .container {
+      max-width: 1266px;
     }
   }
 `;

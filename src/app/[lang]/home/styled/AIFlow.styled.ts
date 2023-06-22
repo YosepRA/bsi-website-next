@@ -16,8 +16,12 @@ export const AIFlow = styled.section`
     }
   }
 
+  @media screen and (${device.md}) {
+    padding: 50px 0 60px;
+  }
+
   @media screen and (${device.lg}) {
-    padding: 48px 0 82px;
+    padding: 80px 0 74px;
   }
 `;
 
@@ -68,8 +72,36 @@ export const AIFlowCard = styled.article`
     }
   }
 
+  @media screen and (${device.md}) {
+    padding: 56px 20px 20px;
+
+    .ai-flow__card {
+      &-icon {
+        top: 0;
+        left: 20px;
+        width: 80px;
+        height: 80px;
+        transform: translateY(-50%);
+      }
+
+      &-title {
+        font-size: 22px;
+      }
+
+      &-excerpt {
+        font-size: 15px;
+      }
+    }
+  }
+
   @media screen and (${device.lg}) {
     width: 90%;
     margin: 0 auto;
+
+    .ai-flow__card {
+      &-excerpt {
+        font-size: 16px;
+      }
+    }
   }
 `;

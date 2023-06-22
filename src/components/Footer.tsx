@@ -31,7 +31,7 @@ const Footer = function FooterComponent() {
     <Styled.Footer className="page-footer">
       <Container>
         <Row className="page-footer__row page-footer__row--one">
-          <Col lg={5}>
+          <Col md={7} lg={5}>
             <div className="page-footer__info">
               <Image
                 src={BSILogoHorizontalText}
@@ -51,7 +51,7 @@ const Footer = function FooterComponent() {
             </div>
           </Col>
 
-          <Col lg={3}>
+          <Col md={4} lg={3}>
             <div className="page-footer__navigation">
               <h2 className="page-footer__navigation-title">
                 More Information
@@ -82,74 +82,80 @@ const Footer = function FooterComponent() {
 
           <Col lg={4}>
             <div className="page-footer__media">
-              <div className="page-footer__media__audit">
-                <h2 className="page-footer__media-title page-footer__media__audit-title">
-                  Audited By
-                </h2>
+              <Row>
+                <Col md={6} lg={12}>
+                  <div className="page-footer__media__audit">
+                    <h2 className="page-footer__media-title page-footer__media__audit-title">
+                      Audited By
+                    </h2>
 
-                <Image
-                  src={slowMist}
-                  alt="SlowMist"
-                  className="page-footer__media__audit-logo"
-                />
-              </div>
+                    <Image
+                      src={slowMist}
+                      alt="SlowMist"
+                      className="page-footer__media__audit-logo"
+                    />
+                  </div>
+                </Col>
 
-              <div className="page-footer__media__listing">
-                <h2 className="page-footer__media-title page-footer__media__listing-title">
-                  Listed on
-                </h2>
+                <Col md={6} lg={12}>
+                  <div className="page-footer__media__listing">
+                    <h2 className="page-footer__media-title page-footer__media__listing-title">
+                      Listed on
+                    </h2>
 
-                <ul className="page-footer__media__listing-list">
-                  <Row className="g-3">
-                    <Col xs={6}>
-                      <a
-                        href="https://www.digifinex.com/en-ww/trade/USDT/BSI"
-                        className="page-footer__media__listing-list-item"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Image src={digifinex} alt="Digifinex" />
-                      </a>
-                    </Col>
-                    <Col xs={6}>
-                      <a
-                        href="https://coinsbit.io/trade/BSI_USDT"
-                        className="page-footer__media__listing-list-item"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Image src={coinsbit} alt="Coinsbit" />
-                      </a>
-                    </Col>
-                    <Col xs={6}>
-                      <a
-                        href="https://coinmarketcap.com/currencies/bali-social-integrated"
-                        className="page-footer__media__listing-list-item"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Image src={coinmarketcap} alt="CoinMarketCap" />
-                      </a>
-                    </Col>
-                    <Col xs={6}>
-                      <a
-                        href="https://www.coingecko.com/en/coins/bali-social-integrated"
-                        className="page-footer__media__listing-list-item"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Image src={coingecko} alt="CoinGecko" />
-                      </a>
-                    </Col>
-                  </Row>
-                </ul>
-              </div>
+                    <ul className="page-footer__media__listing-list">
+                      <Row className="g-3">
+                        <Col xs={6}>
+                          <a
+                            href="https://www.digifinex.com/en-ww/trade/USDT/BSI"
+                            className="page-footer__media__listing-list-item"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Image src={digifinex} alt="Digifinex" />
+                          </a>
+                        </Col>
+                        <Col xs={6}>
+                          <a
+                            href="https://coinsbit.io/trade/BSI_USDT"
+                            className="page-footer__media__listing-list-item"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Image src={coinsbit} alt="Coinsbit" />
+                          </a>
+                        </Col>
+                        <Col xs={6}>
+                          <a
+                            href="https://coinmarketcap.com/currencies/bali-social-integrated"
+                            className="page-footer__media__listing-list-item"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Image src={coinmarketcap} alt="CoinMarketCap" />
+                          </a>
+                        </Col>
+                        <Col xs={6}>
+                          <a
+                            href="https://www.coingecko.com/en/coins/bali-social-integrated"
+                            className="page-footer__media__listing-list-item"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Image src={coingecko} alt="CoinGecko" />
+                          </a>
+                        </Col>
+                      </Row>
+                    </ul>
+                  </div>
+                </Col>
+              </Row>
             </div>
           </Col>
         </Row>
 
         <Row className="page-footer__row page-footer__row--two">
-          <Col lg={6}>
+          <Col md={6}>
             <div className="page-footer__social-media">
               <h2 className="page-footer__social-media__title">Follow Us</h2>
 
@@ -217,7 +223,7 @@ const Footer = function FooterComponent() {
             </div>
           </Col>
 
-          <Col lg={3}>
+          <Col md={5} lg={3}>
             <div className="page-footer__smart-contract">
               <p className="page-footer__smart-contract__text">
                 Please check our

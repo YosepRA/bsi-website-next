@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 
 import joinUsPartnersIcon from 'assets/img/join-us-partners.svg';
-import DemoImage from 'components/styled/DemoImage.styled.ts';
 import Button from 'components/styled/Button.styled.ts';
 
 import * as Styled from './styled/JoinUs.styled.ts';

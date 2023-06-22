@@ -15,7 +15,17 @@ const JoinUs = function JoinUsComponent() {
       <Container>
         <Row>
           <Col>
-            <h2 className="join-us__title">Join Us</h2>
+            <div className="join-us__intro">
+              <h2 className="join-us__intro-title">Join Us</h2>
+
+              <div className="join-us__intro-excerpt">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Accusamus placeat maxime voluptatibus earum quam veniam quas
+                  iste dicta harum est!
+                </p>
+              </div>
+            </div>
           </Col>
         </Row>
 

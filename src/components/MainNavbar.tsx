@@ -47,31 +47,33 @@ const MainNavbar = function MainNavbarComponent() {
         </div>
 
         <Navbar.Collapse id="main-navbar" className="main-navbar__collapse">
-          <Nav className="main-navbar__nav">
-            <Nav.Link href="#ecosystem" className="main-navbar__nav-link">
-              {aboutUs}
-            </Nav.Link>
-            <Nav.Link href="#download-bsi" className="main-navbar__nav-link">
-              {wallet}
-            </Nav.Link>
-            <Nav.Link href="#partnership" className="main-navbar__nav-link">
-              {partners}
-            </Nav.Link>
-            <Nav.Link
-              href="#join-us"
-              className="main-navbar__nav-link main-navbar__nav-link--join-us"
-            >
-              {joinUs}
-            </Nav.Link>
-            <Nav.Link
-              href="#"
-              className="main-navbar__nav-link main-navbar__nav-link--whitepaper"
-            >
-              <span className="main-navbar__nav-link__whitepaper">
-                {whitepaper}
-              </span>
-            </Nav.Link>
-          </Nav>
+          <Container>
+            <Nav className="main-navbar__nav">
+              <Nav.Link href="#ecosystem" className="main-navbar__nav-link">
+                {aboutUs}
+              </Nav.Link>
+              <Nav.Link href="#download-bsi" className="main-navbar__nav-link">
+                {wallet}
+              </Nav.Link>
+              <Nav.Link href="#partnership" className="main-navbar__nav-link">
+                {partners}
+              </Nav.Link>
+              <Nav.Link
+                href="#join-us"
+                className="main-navbar__nav-link main-navbar__nav-link--join-us"
+              >
+                {joinUs}
+              </Nav.Link>
+              <Nav.Link
+                href="#"
+                className="main-navbar__nav-link main-navbar__nav-link--whitepaper"
+              >
+                <span className="main-navbar__nav-link__whitepaper">
+                  {whitepaper}
+                </span>
+              </Nav.Link>
+            </Nav>
+          </Container>
         </Navbar.Collapse>
       </Container>
     </Styled.MainNavbar>

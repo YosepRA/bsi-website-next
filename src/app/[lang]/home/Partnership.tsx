@@ -135,9 +135,25 @@ const Partnership = function PartnershipComponent() {
   return (
     <Styled.Partnership id="partnership" className="partnership">
       <Container>
-        <Row>
+        <Row className="partnership__row">
           <Col>
-            <Styled.PartnershipSupported>
+            <Styled.PartnershipIntro className="partnership__intro">
+              <h2 className="partnership__intro-title">Partners</h2>
+
+              <div className="partnership__intro-excerpt">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis quasi provident neque sit laudantium quo quos harum
+                  asperiores qui similique.
+                </p>
+              </div>
+            </Styled.PartnershipIntro>
+          </Col>
+        </Row>
+
+        <Row className="partnership__row">
+          <Col>
+            <Styled.PartnershipSupported className="partnership__supported">
               <h3 className="partnership__title partnership__supported-title">
                 Supported By
               </h3>
@@ -145,7 +161,7 @@ const Partnership = function PartnershipComponent() {
               <ul className="partnership__list partnership__supported-list">
                 <Row className="partnership__list-row g-3">
                   {partnersData.supported.map(({ name, img }) => (
-                    <Col key={name} lg={4}>
+                    <Col key={name} md={7} lg={4}>
                       <li className="partnership__list-item partnership__supported-list-item">
                         <Image src={img} alt={name} />
                       </li>
@@ -157,9 +173,9 @@ const Partnership = function PartnershipComponent() {
           </Col>
         </Row>
 
-        <Row>
+        <Row className="partnership__row">
           <Col>
-            <Styled.PartnershipStrategic>
+            <Styled.PartnershipStrategic className="partnership__strategic">
               <h3 className="partnership__title partnership__strategic-title">
                 Strategic Partners
               </h3>
@@ -167,7 +183,7 @@ const Partnership = function PartnershipComponent() {
               <ul className="partnership__list partnership__strategic-list">
                 <Row className="partnership__list-row g-3">
                   {partnersData.strategic.map(({ name, img }) => (
-                    <Col key={name} xs={6} lg={3}>
+                    <Col key={name} xs={6} md={4} lg={3}>
                       <li className="partnership__list-item partnership__strategic-list-item">
                         <Image src={img} alt={name} />
                       </li>
@@ -179,17 +195,17 @@ const Partnership = function PartnershipComponent() {
           </Col>
         </Row>
 
-        <Row>
+        <Row className="partnership__row">
           <Col>
-            <Styled.PartnershipMedia>
+            <Styled.PartnershipMedia className="partnership__media">
               <h3 className="partnership__title partnership__media-title">
-                Media
+                Publication
               </h3>
 
               <ul className="partnership__list partnership__media-list">
                 <Row className="partnership__list-row g-3">
                   {partnersData.media.map(({ name, img }) => (
-                    <Col key={name} xs={6} lg={2}>
+                    <Col key={name} xs={6} md={4} lg={2}>
                       <li className="partnership__list-item partnership__media-list-item">
                         <Image src={img} alt={name} />
                       </li>

@@ -24,7 +24,17 @@ const Roadmap = function RoadmapComponent() {
       <Container>
         <Row>
           <Col>
-            <h1 className="roadmap__title">Roadmap</h1>
+            <div className="roadmap__intro">
+              <h1 className="roadmap__intro-title">Roadmap</h1>
+
+              <div className="roadmap__intro-excerpt">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates aut qui reprehenderit maxime, quos doloremque
+                  doloribus voluptate similique sed exercitationem!
+                </p>
+              </div>
+            </div>
           </Col>
         </Row>
 
@@ -35,8 +45,8 @@ const Roadmap = function RoadmapComponent() {
                 key={titleBox.title}
                 className="roadmap__year"
               >
-                <Row>
-                  <Col lg={{ span: 6, order: (index + 1) % 2 ? 1 : 2 }}>
+                <Row className="roadmap__year-row">
+                  <Col lg={{ span: 5, order: (index + 1) % 2 ? 1 : 2 }}>
                     <Styled.RoadmapTitleBox className="roadmap__title-box">
                       <Image
                         src={implementedIcon}
@@ -50,7 +60,7 @@ const Roadmap = function RoadmapComponent() {
                     </Styled.RoadmapTitleBox>
                   </Col>
 
-                  <Col lg={{ span: 6, order: (index + 1) % 1 ? 2 : 2 }}>
+                  <Col lg={{ span: 5, order: (index + 1) % 1 ? 2 : 1 }}>
                     <Styled.RoadmapList className="roadmap__list">
                       {list.map((data) => (
                         <RoadmapItem

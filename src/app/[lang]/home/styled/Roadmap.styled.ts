@@ -7,18 +7,58 @@ export const RoadmapStyled = styled.section`
   padding: 42px 0 55px;
 
   .roadmap {
-    &__title {
+    &__intro {
       margin-bottom: 40px;
-      font-size: 34px;
-      font-weight: 700;
-      text-align: center;
+
+      &-title {
+        margin-bottom: 16px;
+        font-size: 34px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      &-excerpt {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (${device.md}) {
+    padding: 60px 0;
+
+    .roadmap {
+      &__intro {
+        margin-bottom: 56px;
+
+        &-title {
+          font-size: 40px;
+        }
+
+        &-excerpt {
+          width: 90%;
+          margin: 0 auto;
+          font-size: 17px;
+        }
+      }
     }
   }
 
   @media screen and (${device.lg}) {
+    padding: 74px 0;
+
     .roadmap {
-      &__title {
-        margin-bottom: 88px;
+      &__intro {
+        margin-bottom: 64px;
+
+        &-title {
+          margin-bottom: 24px;
+          font-size: 48px;
+        }
+
+        &-excerpt {
+          width: 75%;
+        }
       }
     }
   }
@@ -33,7 +73,13 @@ export const RoadmapYear = styled.article`
 
   @media screen and (${device.lg}) {
     &:not(:last-child) {
-      margin-bottom: 120px;
+      margin-bottom: 134px;
+    }
+
+    .roadmap__year {
+      &-row {
+        justify-content: center;
+      }
     }
   }
 `;
@@ -64,10 +110,21 @@ export const RoadmapTitleBox = styled.div`
     }
   }
 
+  @media screen and (${device.md}) {
+    width: 320px;
+    height: 320px;
+
+    .roadmap__title-box {
+      &__title {
+        font-size: 28px;
+      }
+    }
+  }
+
   @media screen and (${device.lg}) {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
+    width: 320px;
+    height: 320px;
+    margin-bottom: 0;
   }
 `;
 
@@ -75,6 +132,19 @@ export const RoadmapList = styled.div``;
 
 export const RoadmapItem = styled.article`
   cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (${device.md}) {
+    width: 70%;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
 `;
 
 export const RoadmapItemToggle = styled.button`
@@ -113,15 +183,25 @@ export const RoadmapItemToggle = styled.button`
       }
     }
   }
+
+  @media screen and (${device.md}) {
+    .roadmap__item {
+      &-toggle {
+        &__title {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 `;
 
 export const RoadmapItemBody = styled.ul<RoadmapItemBodyProp>`
   max-height: 0;
   margin-bottom: 0;
-  /* padding: 0; */
   background-color: ${({ theme }) => theme.colors.bg.main};
   transition: all 300ms ease-out;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 16px;
 
   ${(props) =>

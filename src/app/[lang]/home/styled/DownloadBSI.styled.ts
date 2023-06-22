@@ -17,6 +17,26 @@ export const DownloadBSI = styled.section`
       margin: 0 auto 48px;
     }
   }
+
+  @media screen and (${device.md}) {
+    padding: 60px 0 120px;
+
+    .download-bsi {
+      &__image {
+        width: 64%;
+      }
+    }
+  }
+
+  @media screen and (${device.lg}) {
+    padding: 74px 0 148px;
+
+    .download-bsi {
+      &__image {
+        width: 90%;
+      }
+    }
+  }
 `;
 
 export const DownloadBSIInfo = styled.div`
@@ -55,8 +75,23 @@ export const DownloadBSIInfo = styled.div`
         margin: 0 12px;
 
         img {
-          width: 141px;
+          width: 142px;
           height: auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (${device.md}) {
+    .download-bsi__info {
+      &-excerpt {
+        margin-bottom: 48px;
+        font-size: 15px;
+      }
+
+      &__download {
+        &-title {
+          font-size: 15px;
         }
       }
     }
@@ -66,16 +101,29 @@ export const DownloadBSIInfo = styled.div`
     .download-bsi__info {
       &-title {
         font-size: 56px;
+        text-align: left;
       }
 
       &-excerpt {
         margin-bottom: 96px;
+        text-align: left;
+        font-size: 16px;
       }
 
       &__download {
+        &-title {
+          margin-bottom: 10px;
+          text-align: left;
+          font-size: 16px;
+        }
+
+        &-list {
+          justify-content: flex-start;
+        }
+
         &-item {
           display: inline-block;
-          margin-right: 24px;
+          margin: 0 24px 0 0;
 
           img {
             width: 176px;

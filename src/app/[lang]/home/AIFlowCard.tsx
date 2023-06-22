@@ -7,11 +7,11 @@ const AIFlowCard = function AIFlowCardComponent() {
   return (
     <Styled.AIFlowCard className="ai-flow__card">
       <div className="ai-flow__card-icon">
-        <h2>Title</h2>
+        <h2>Icon</h2>
       </div>
 
       <div className="ai-flow__card-body">
-        <h4 className="ai-flow__card-title">LOREM IPSUM DOLOR SIT AMET</h4>
+        <h4 className="ai-flow__card-title">LOREM IPSUM</h4>
 
         <div className="ai-flow__card-excerpt">
           <p>
