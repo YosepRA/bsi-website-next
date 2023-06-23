@@ -57,7 +57,7 @@ interface EcosystemIntro {
   excerpt: string[];
 }
 
-interface EcosystemCompany {
+export interface EcosystemCompany {
   title: string;
   excerpt: string[];
   logoUrl: string;
@@ -68,7 +68,7 @@ interface HomeEcosystem {
   companies: EcosystemCompany[];
 }
 
-interface AIFlowItem {
+export interface AIFlowItem {
   title: string;
   excerpt: string[];
   iconUrl: string;
@@ -76,6 +76,11 @@ interface AIFlowItem {
 
 interface HomeAIFlow {
   items: AIFlowItem[];
+}
+
+interface RoadmapIntro {
+  title: string;
+  excerpt: string[];
 }
 
 export interface RoadmapItemList {
@@ -94,9 +99,11 @@ interface RoadmapItem {
     title: string;
   };
   list: RoadmapItemList[];
+  color: string;
 }
 
 interface HomeRoadmap {
+  intro: RoadmapIntro;
   items: RoadmapItem[];
 }
 
@@ -107,6 +114,10 @@ interface HomeDownloadBSI {
 }
 
 interface HomePartnership {
+  intro: {
+    title: string;
+    excerpt: string[];
+  };
   supported: {
     title: string;
   };
@@ -118,13 +129,21 @@ interface HomePartnership {
   };
 }
 
-interface JoinUsItem {
+interface JoinUsIntro {
+  title: string;
+  excerpt: string[];
+}
+
+export interface JoinUsItem {
   title: string;
   excerpt: string[];
   button: string;
+  color: string;
+  iconUrl: string;
 }
 
 interface HomeJoinUs {
+  intro: JoinUsIntro;
   partners: JoinUsItem;
   ambassadors: JoinUsItem;
 }

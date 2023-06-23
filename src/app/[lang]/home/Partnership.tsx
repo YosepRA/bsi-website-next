@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,6 +8,12 @@ import Col from 'react-bootstrap/Col';
 
 import type { Partners } from 'types/home.d.ts';
 import kepa from 'assets/img/kepa.png';
+import dexCapital from 'assets/img/strategic-dex-capital.png';
+import kebunOnline from 'assets/img/strategic-kebun-online.png';
+import cryptosiast from 'assets/img/strategic-cryptosiast.png';
+import kriptonesia from 'assets/img/strategic-kriptonesia.png';
+import lambeCrypto from 'assets/img/strategic-lambe-crypto.png';
+import bullet from 'assets/img/strategic-bullet.png';
 import akurat from 'assets/img/media-akurat.png';
 import antara from 'assets/img/media-antara.png';
 import bisnis from 'assets/img/media-bisnis.png';
@@ -28,6 +34,8 @@ import tribun from 'assets/img/media-tribun.png';
 import viva from 'assets/img/media-viva.png';
 import wartaEkonomi from 'assets/img/media-warta-ekonomi.png';
 
+import DictionaryContext from 'components/context/Dictionary.context.tsx';
+
 import * as Styled from './styled/Partnership.styled.ts';
 
 const partnersData: Partners = {
@@ -39,16 +47,28 @@ const partnersData: Partners = {
   ],
   strategic: [
     {
-      name: 'One',
-      img: kepa,
+      name: 'Dex Capital',
+      img: dexCapital,
     },
     {
-      name: 'Two',
-      img: kepa,
+      name: 'Kebun Online',
+      img: kebunOnline,
     },
     {
-      name: 'Three',
-      img: kepa,
+      name: 'Cryptosiast',
+      img: cryptosiast,
+    },
+    {
+      name: 'Kriptonesia',
+      img: kriptonesia,
+    },
+    {
+      name: 'Lambe Crypto',
+      img: lambeCrypto,
+    },
+    {
+      name: 'Bullet',
+      img: bullet,
     },
   ],
   media: [
@@ -132,30 +152,34 @@ const partnersData: Partners = {
 };
 
 const Partnership = function PartnershipComponent() {
+  const {
+    home: {
+      partnership: { intro, supported, strategic, media },
+    },
+  } = useContext(DictionaryContext);
+
   return (
     <Styled.Partnership id="partnership" className="partnership">
       <Container>
         <Row className="partnership__row">
           <Col>
             <Styled.PartnershipIntro className="partnership__intro">
-              <h2 className="partnership__intro-title">Partners</h2>
+              <h2 className="partnership__intro-title">{intro.title}</h2>
 
               <div className="partnership__intro-excerpt">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Corporis quasi provident neque sit laudantium quo quos harum
-                  asperiores qui similique.
-                </p>
+                {intro.excerpt.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
               </div>
             </Styled.PartnershipIntro>
           </Col>
         </Row>
 
-        <Row className="partnership__row">
+        {/* <Row className="partnership__row">
           <Col>
             <Styled.PartnershipSupported className="partnership__supported">
               <h3 className="partnership__title partnership__supported-title">
-                Supported By
+                {supported.title}
               </h3>
 
               <ul className="partnership__list partnership__supported-list">
@@ -171,13 +195,13 @@ const Partnership = function PartnershipComponent() {
               </ul>
             </Styled.PartnershipSupported>
           </Col>
-        </Row>
+        </Row> */}
 
         <Row className="partnership__row">
           <Col>
             <Styled.PartnershipStrategic className="partnership__strategic">
               <h3 className="partnership__title partnership__strategic-title">
-                Strategic Partners
+                {strategic.title}
               </h3>
 
               <ul className="partnership__list partnership__strategic-list">
@@ -199,7 +223,7 @@ const Partnership = function PartnershipComponent() {
           <Col>
             <Styled.PartnershipMedia className="partnership__media">
               <h3 className="partnership__title partnership__media-title">
-                Publication
+                {media.title}
               </h3>
 
               <ul className="partnership__list partnership__media-list">

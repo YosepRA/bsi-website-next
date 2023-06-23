@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -23,10 +23,15 @@ import digifinex from 'assets/img/digifinex-white.png';
 import coinsbit from 'assets/img/coinsbit-white.png';
 import coinmarketcap from 'assets/img/cmc-white.png';
 import coingecko from 'assets/img/coingecko-white.png';
+import DictionaryContext from 'components/context/Dictionary.context.tsx';
 
 import * as Styled from './styled/Footer.styled.ts';
 
 const Footer = function FooterComponent() {
+  const {
+    footer: { info, navigation, media, socialMedia, smartContract },
+  } = useContext(DictionaryContext);
+
   return (
     <Styled.Footer className="page-footer">
       <Container>
@@ -39,14 +44,14 @@ const Footer = function FooterComponent() {
                 className="page-footer__info-logo"
               />
 
-              <p className="page-footer__info-excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id esse
-                cum ex totam consequuntur sunt perspiciatis animi nisi, dicta
-                aliquid!
-              </p>
+              <div className="page-footer__info-excerpt">
+                {info.excerpt.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
 
               <p className="page-footer__info-contact">
-                Contact us: <b>info@enbsi.com</b>
+                {info.contact}: <b>info@enbsi.com</b>
               </p>
             </div>
           </Col>
@@ -54,25 +59,25 @@ const Footer = function FooterComponent() {
           <Col md={4} lg={3}>
             <div className="page-footer__navigation">
               <h2 className="page-footer__navigation-title">
-                More Information
+                {navigation.title}
               </h2>
 
               <ul className="page-footer__navigation-list">
                 <li className="page-footer__navigation-list-item">
-                  <a href="#ecosystem">About Us</a>
+                  <a href="#ecosystem">{navigation.menu.aboutUs}</a>
                 </li>
                 <li className="page-footer__navigation-list-item">
-                  <a href="#download-bsi">Wallet</a>
+                  <a href="#download-bsi">{navigation.menu.wallet}</a>
                 </li>
                 <li className="page-footer__navigation-list-item">
-                  <a href="#partnership">Partners</a>
+                  <a href="#partnership">{navigation.menu.partners}</a>
                 </li>
                 <li className="page-footer__navigation-list-item">
-                  <a href="#join-us">Join Us</a>
+                  <a href="#join-us">{navigation.menu.joinUs}</a>
                 </li>
                 <li className="page-footer__navigation-list-item page-footer__navigation-list-item--whitepaper">
                   <a href="#">
-                    Whitepaper{' '}
+                    {navigation.menu.whitepaper}{' '}
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   </a>
                 </li>

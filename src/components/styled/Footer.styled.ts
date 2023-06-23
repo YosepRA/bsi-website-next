@@ -128,7 +128,14 @@ export const Footer = styled.footer`
           font-size: 24px;
 
           a {
+            display: inline-block;
             color: inherit;
+            transition: all 200ms ease-out;
+
+            &:hover {
+              color: ${({ theme }) => theme.colors.primary.main};
+              transform: scale(1.1);
+            }
           }
         }
       }

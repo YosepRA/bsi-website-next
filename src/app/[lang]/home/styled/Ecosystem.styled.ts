@@ -97,8 +97,8 @@ export const EcosystemCard = styled.article`
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: 25%;
-      padding: 16px;
+      width: 88px;
+      height: 42px;
       background-color: #5b259f;
       border-radius: 12px;
 
@@ -106,6 +106,17 @@ export const EcosystemCard = styled.article`
         display: inline;
         margin-bottom: 0;
         font-size: 12px;
+        font-weight: 700;
+      }
+
+      &-wrapper {
+        position: relative;
+        width: 85%;
+        height: 100%;
+      }
+
+      &-image {
+        object-fit: contain;
       }
     }
 
@@ -134,7 +145,12 @@ export const EcosystemCard = styled.article`
         top: 50%;
         left: 0;
         width: 120px;
+        height: 48px;
         transform: translate(-70%, -50%);
+
+        &-wrapper {
+          width: 80%;
+        }
       }
 
       &__info {

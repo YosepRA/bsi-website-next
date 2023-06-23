@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import device from 'lib/styled-components/device-breakpoints.ts';
 
@@ -18,6 +19,7 @@ export const MainNavbar = styled(Navbar)`
     &__controls {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      align-items: center;
     }
 
     &__toggle {
@@ -44,6 +46,10 @@ export const MainNavbar = styled(Navbar)`
 
         &:not(:last-child) {
           border-bottom: 1px solid white;
+        }
+
+        &:hover {
+          text-decoration: underline;
         }
 
         &--join-us {
@@ -150,4 +156,59 @@ export const MainNavbar = styled(Navbar)`
   }
 `;
 
-export const LangSwitch = styled.div``;
+export const LangSwitch = styled(NavDropdown)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dropdown-menu {
+    left: -100px;
+    background-color: ${({ theme }) => theme.colors.bg.secondary};
+  }
+
+  .dropdown-toggle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-navbar__lang-switch {
+    &__item {
+      color: ${({ theme }) => theme.colors.body.white};
+      background-color: ${({ theme }) => theme.colors.bg.secondary};
+      transition: all 200ms ease-out;
+
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.bg.primary};
+      }
+
+      &:active {
+        background-color: ${({ theme }) => theme.colors.bg.third};
+      }
+    }
+  }
+`;
+
+export const LangSwitchTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .main-navbar__lang-switch__title {
+    &-flag {
+      display: inline-flex;
+      align-items: center;
+
+      img {
+        width: 25px;
+        height: auto;
+      }
+    }
+
+    &-name {
+      display: inline-block;
+      margin-left: 4px;
+      font-weight: 700;
+    }
+  }
+`;

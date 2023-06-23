@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -17,11 +17,17 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import bannerGraphic from 'assets/img/banner-graphic.png';
-import DemoImage from 'components/styled/DemoImage.styled.ts';
+import DictionaryContext from 'components/context/Dictionary.context.tsx';
 
 import * as Styled from './styled/Banner.styled.ts';
 
 const Banner = function BannerComponent() {
+  const {
+    home: {
+      banner: { excerpt },
+    },
+  } = useContext(DictionaryContext);
+
   return (
     <Styled.Banner className="banner">
       <Container>
@@ -40,12 +46,9 @@ const Banner = function BannerComponent() {
               </h1>
 
               <div className="banner__info-excerpt">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
-                  vitae quidem blanditiis labore, porro fuga. Ipsam in officia
-                  saepe cumque sapiente quibusdam aut sunt! Earum beatae eaque
-                  ut dicta atque?
-                </p>
+                {excerpt.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
               </div>
 
               <div className="banner__info-social-media">

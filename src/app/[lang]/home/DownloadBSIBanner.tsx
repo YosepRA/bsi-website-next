@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,10 +9,17 @@ import Col from 'react-bootstrap/Col';
 import BSIWalletMockup from 'assets/img/BSI-Wallet-Mockup.png';
 import AppleStoreBadge from 'assets/img/apple-store-badge.svg';
 import GoogleStoreBadge from 'assets/img/google-play-badge.png';
+import DictionaryContext from 'components/context/Dictionary.context.tsx';
 
 import * as Styled from './styled/DownloadBSI.styled.ts';
 
 const DownloadBSIBanner = function DownloadBSIBannerComponent() {
+  const {
+    home: {
+      downloadBSI: { title, excerpt, downloadTitle },
+    },
+  } = useContext(DictionaryContext);
+
   return (
     <Styled.DownloadBSI id="download-bsi" className="download-bsi">
       <Container>
@@ -27,17 +34,17 @@ const DownloadBSIBanner = function DownloadBSIBannerComponent() {
 
           <Col lg={6}>
             <Styled.DownloadBSIInfo className="download-bsi__info">
-              <h2 className="download-bsi__info-title">BSI Wallet</h2>
+              <h2 className="download-bsi__info-title">{title}</h2>
 
-              <p className="download-bsi__info-excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                ex dolore voluptatem ratione laudantium rerum consectetur eaque
-                asperiores sint sapiente?
-              </p>
+              <div className="download-bsi__info-excerpt">
+                {excerpt.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
 
               <div className="download-bsi__info__download">
                 <p className="download-bsi__info__download-title">
-                  Download now on
+                  {downloadTitle}
                 </p>
 
                 <div className="download-bsi__info__download-list">

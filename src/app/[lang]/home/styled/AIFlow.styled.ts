@@ -54,6 +54,16 @@ export const AIFlowCard = styled.article`
         font-weight: 700;
         text-transform: uppercase;
       }
+
+      &__wrapper {
+        position: relative;
+        width: 70%;
+        height: 100%;
+      }
+
+      &__image {
+        object-fit: contain;
+      }
     }
 
     &-title {

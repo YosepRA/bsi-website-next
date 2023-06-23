@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
+import type { JoinUsCardStyledProps } from 'types/home.d.ts';
 import device from 'lib/styled-components/device-breakpoints.ts';
 
 export const JoinUs = styled.section`
@@ -59,7 +60,7 @@ export const JoinUs = styled.section`
   }
 `;
 
-export const JoinUsCard = styled.article`
+export const JoinUsCard = styled.article<JoinUsCardStyledProps>`
   position: relative;
   width: 90%;
   margin-left: auto;
@@ -88,6 +89,16 @@ export const JoinUsCard = styled.article`
       background-color: ${({ theme }) => theme.colors.secondary.main};
       border-radius: 16px;
       transform: translateX(-50%);
+
+      &__wrapper {
+        position: relative;
+        width: 70%;
+        height: 100%;
+      }
+
+      &__image {
+        object-fit: contain;
+      }
     }
 
     &-title {
@@ -113,6 +124,26 @@ export const JoinUsCard = styled.article`
       }
     }
   }
+
+  ${(props) =>
+    props.color === 'primary' &&
+    css`
+      .join-us__card {
+        &-icon {
+          background-color: ${({ theme }) => theme.colors.primary.main};
+        }
+      }
+    `}
+
+  ${(props) =>
+    props.color === 'secondary' &&
+    css`
+      .join-us__card {
+        &-icon {
+          background-color: ${({ theme }) => theme.colors.secondary.main};
+        }
+      }
+    `}
 
   @media screen and (${device.md}) {
     width: 65%;

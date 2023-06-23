@@ -63,6 +63,12 @@ export const BannerInfo = styled.div`
         display: inline-block;
         font-size: 28px;
         color: inherit;
+        transition: all 200ms ease-out;
+
+        &:hover {
+          color: ${({ theme }) => theme.colors.primary.main};
+          transform: scale(1.1);
+        }
       }
     }
   }
