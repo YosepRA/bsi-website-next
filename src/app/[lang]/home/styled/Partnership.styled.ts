@@ -87,7 +87,10 @@ export const PartnershipIntro = styled.div`
 
     &-excerpt {
       text-align: center;
-      font-size: 15px;
+
+      p {
+        font-size: 15px;
+      }
     }
   }
 
@@ -101,7 +104,10 @@ export const PartnershipIntro = styled.div`
       &-excerpt {
         width: 90%;
         margin: 0 auto;
-        font-size: 17px;
+
+        p {
+          font-size: 17px;
+        }
       }
     }
   }
@@ -115,7 +121,10 @@ export const PartnershipIntro = styled.div`
 
       &-excerpt {
         width: 75%;
-        font-size: 16px;
+
+        p {
+          font-size: 20px;
+        }
       }
     }
   }

@@ -25,7 +25,10 @@ export const JoinUs = styled.section`
 
       &-excerpt {
         text-align: center;
-        font-size: 15px;
+
+        p {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -36,6 +39,10 @@ export const JoinUs = styled.section`
     .join-us {
       &__intro {
         margin-bottom: 48px;
+
+        &-excerpt {
+          font-size: 17px;
+        }
       }
     }
   }
@@ -53,7 +60,10 @@ export const JoinUs = styled.section`
         &-excerpt {
           width: 75%;
           margin: 0 auto;
-          font-size: 16px;
+
+          p {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -110,7 +120,6 @@ export const JoinUsCard = styled.article<JoinUsCardStyledProps>`
     &-body {
       margin-bottom: 36px;
       padding-left: 34px;
-      font-size: 13px;
     }
 
     &-footer {
@@ -168,10 +177,6 @@ export const JoinUsCard = styled.article<JoinUsCardStyledProps>`
         font-size: 28px;
       }
 
-      &-body {
-        font-size: 15px;
-      }
-
       &-footer {
         &__button {
           width: 200px;
@@ -187,7 +192,6 @@ export const JoinUsCard = styled.article<JoinUsCardStyledProps>`
     .join-us__card {
       &-body {
         margin-bottom: 43px;
-        font-size: 16px;
       }
     }
   }

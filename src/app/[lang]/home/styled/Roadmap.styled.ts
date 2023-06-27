@@ -22,8 +22,11 @@ export const RoadmapStyled = styled.section`
       }
 
       &-excerpt {
-        font-size: 15px;
         text-align: center;
+
+        p {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -42,7 +45,10 @@ export const RoadmapStyled = styled.section`
         &-excerpt {
           width: 90%;
           margin: 0 auto;
-          font-size: 17px;
+
+          p {
+            font-size: 17px;
+          }
         }
       }
     }
@@ -62,6 +68,10 @@ export const RoadmapStyled = styled.section`
 
         &-excerpt {
           width: 75%;
+
+          p {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -183,44 +193,58 @@ export const RoadmapItemToggle = styled.button<RoadmapItemToggleProps>`
   color: white;
   transition: background-color 200ms ease-out, border-radius 300ms ease-out;
 
-  .roadmap__item {
-    &-toggle {
-      &__icon {
-        position: absolute;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 48px;
-        height: 48px;
-        background-color: ${({ theme, color }) => theme.colors[color].main};
-        border-radius: 16px;
-        font-size: 13px;
-        text-transform: uppercase;
-
-        &-wrapper {
-          position: relative;
-          width: 70%;
-          height: 100%;
-        }
-
-        &-image {
-          object-fit: contain;
-        }
-      }
-
+  &:hover {
+    .roadmap__item-toggle {
       &__title {
-        margin-left: 8px;
-        margin-bottom: 0;
-        font-size: 13px;
+        color: ${({ theme, color }) => theme.colors[color].main};
       }
+    }
+  }
+
+  .roadmap__item-toggle {
+    &__icon {
+      position: absolute;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      background-color: ${({ theme, color }) => theme.colors[color].main};
+      border-radius: 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+
+      &-wrapper {
+        position: relative;
+        width: 70%;
+        height: 100%;
+      }
+
+      &-image {
+        object-fit: contain;
+      }
+    }
+
+    &__title {
+      margin-left: 8px;
+      margin-bottom: 0;
+      font-size: 13px;
+      font-weight: 700;
+      transition: color 200ms ease-out;
     }
   }
 
   ${(props) =>
     props.open &&
-    css`
+    css<RoadmapItemToggleProps>`
       border-radius: 16px 16px 0 0;
+
+      .roadmap__item-toggle {
+        &__title {
+          color: ${({ theme, color }) => theme.colors[color].main};
+        }
+      }
     `}
 
   @media screen and (${device.md}) {

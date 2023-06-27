@@ -31,12 +31,10 @@ export const Footer = styled.footer`
 
       &-excerpt {
         margin-bottom: 32px;
-        font-size: 13px;
       }
 
       &-contact {
         margin-bottom: 0;
-        font-size: 13px;
         color: ${({ theme }) => theme.colors.body.white};
       }
     }
@@ -174,11 +172,6 @@ export const Footer = styled.footer`
 
         &-excerpt {
           margin-bottom: 48px;
-          font-size: 16px;
-        }
-
-        &-contact {
-          font-size: 16px;
         }
       }
 

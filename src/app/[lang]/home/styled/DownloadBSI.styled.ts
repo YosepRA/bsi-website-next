@@ -51,7 +51,6 @@ export const DownloadBSIInfo = styled.div`
 
     &-excerpt {
       margin-bottom: 28px;
-      font-size: 13px;
       text-align: center;
     }
 
@@ -86,7 +85,6 @@ export const DownloadBSIInfo = styled.div`
     .download-bsi__info {
       &-excerpt {
         margin-bottom: 48px;
-        font-size: 15px;
       }
 
       &__download {
@@ -107,7 +105,10 @@ export const DownloadBSIInfo = styled.div`
       &-excerpt {
         margin-bottom: 96px;
         text-align: left;
-        font-size: 16px;
+
+        p {
+          font-size: 20px;
+        }
       }
 
       &__download {

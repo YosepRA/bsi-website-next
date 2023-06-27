@@ -42,6 +42,8 @@ export const BannerInfo = styled.div`
       font-size: 17px;
 
       p {
+        font-size: inherit;
+
         &:last-child {
           margin-bottom: 0;
         }

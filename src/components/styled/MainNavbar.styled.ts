@@ -57,6 +57,12 @@ export const MainNavbar = styled(Navbar)`
           border-bottom: none !important;
         }
 
+        &--whitepaper {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
         &__whitepaper {
           display: block;
           width: 100%;
@@ -130,8 +136,6 @@ export const MainNavbar = styled(Navbar)`
         align-items: center;
 
         &-link {
-          padding: 0 28px;
-
           &:not(:last-child) {
             border: none;
           }

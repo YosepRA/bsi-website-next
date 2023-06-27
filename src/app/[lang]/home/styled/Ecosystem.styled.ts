@@ -35,7 +35,6 @@ export const EcosystemBSI = styled.div`
     &__excerpt {
       margin-bottom: 0;
       text-align: center;
-      font-size: 13px;
     }
   }
 
@@ -130,7 +129,6 @@ export const EcosystemCard = styled.article`
 
       &-excerpt {
         margin-bottom: 0;
-        font-size: 13px;
         word-wrap: break-word;
       }
     }
@@ -157,10 +155,6 @@ export const EcosystemCard = styled.article`
         &-title {
           font-size: 22px;
         }
-
-        &-excerpt {
-          font-size: 15px;
-        }
       }
     }
   }
@@ -170,14 +164,6 @@ export const EcosystemCard = styled.article`
 
     &:not(:last-child) {
       margin-bottom: 18px;
-    }
-
-    .ecosystem-card {
-      &__info {
-        &-excerpt {
-          font-size: 16px;
-        }
-      }
     }
   }
 `;

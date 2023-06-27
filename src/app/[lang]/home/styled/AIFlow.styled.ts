@@ -97,21 +97,11 @@ export const AIFlowCard = styled.article`
       &-title {
         font-size: 22px;
       }
-
-      &-excerpt {
-        font-size: 15px;
-      }
     }
   }
 
   @media screen and (${device.lg}) {
     width: 90%;
     margin: 0 auto;
-
-    .ai-flow__card {
-      &-excerpt {
-        font-size: 16px;
-      }
-    }
   }
 `;
